@@ -23,7 +23,7 @@ Cholifebrand is an elegantly crafted and feature-rich fashion and apparel websit
 
    ```
    git clone https://github.com/kevykibbz/duncho.git
-   
+
    ```
 
 2. **Navigate to the Project Directory:**
@@ -57,7 +57,7 @@ If you'd like to contribute to Cholifebrand, please follow our [Contribution Gui
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Acknowledgments
 
