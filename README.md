@@ -20,8 +20,10 @@ Cholifebrand is an elegantly crafted and feature-rich fashion and apparel websit
 ## Installation
 
 1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/cholifebrand.git
+
+   ```
+   git clone https://github.com/kevykibbz/duncho.git
+   
    ```
 
 2. **Navigate to the Project Directory:**
