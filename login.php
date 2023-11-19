@@ -1,5 +1,4 @@
-<!-- login -->
-	<?php get_header();?>
+	<?php include('header.php'); ?>
 	<div class="address py-5" id="contact">
 		<div class="container py-xl-5 py-lg-3">
 			<div class="title text-center mb-5">
@@ -30,8 +29,8 @@
 								<span class="login_text">login</span>
 							</button>
 							<p class="mt-2 row">
-								<span class="col-md-6 col-12">Dont have an account? <a href="<?php echo get_template_directory_uri();?>/register.php">Register here</a></span>
-								<span class=" col-ms-6 col-12 text-right">Forgotten password? <a href="<?php echo get_template_directory_uri();?>/forgotten_password.php">Reset here</a></span>
+								<span class="col-12">Dont have an account? <a href="register.php" style="color:#FC427B">Register here</a></span>
+								<span class=" col-12">Forgotten password? <a href="forgotten_password.php" style="color:#FC427B">Reset here</a></span>
 							</p>
 						</form>
 					</div>
@@ -41,18 +40,12 @@
 	</div>
 	<!-- //customers-6-->
  	<script type="text/javascript">
-  	$(function()
-  	{
-	  	if(localStorage.userid  !=='' && localStorage.userid !==undefined)
-	  	{
-	  		alert('hello');
+  	$(function(){
+	  	if(localStorage.userid  !=='' && localStorage.userid !==undefined){
 	  		window.location='index.php';
-	  	}
-	  	else
-	  	{
-	  		alert('no');
+	  	}else{
 	  		$('.logged_in,.login_links').removeClass('d-none');
 	  	}
   	});
   </script>
-<?php get_footer();?>
+<?php include('footer.php'); ?>

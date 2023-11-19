@@ -75,11 +75,21 @@
 								<li><a href="contact.php" class="drop-text">Contact us</a></li>
 								<li class="d-none home-links"><a href="comment.php" class="drop-text">Add testimonial</a></li>
 								<li class="home-links d-none"><a href="mycart.php" class="drop-text">My cart <span class="badge badge-pill badge-danger p-2 float-right">
-								<?php 
-								   $email=$_COOKIE['userid'];
-								   $select=$obj->select('cart_items',['email'=>$email]);
-								   echo number_format(count($select));
-								 ?>
+								<?php
+								if (isset($_COOKIE['userid'])) {
+									$email = $_COOKIE['userid'];
+									
+									// Assuming $obj->select returns an array or false in case of an error
+									$select = $obj->select('cart_items', ['email' => $email]);
+
+									if (is_array($select)) {
+										echo number_format(count($select));
+									} else {
+										// Handle the case where $select is not an array (perhaps log an error)
+										echo "Error retrieving cart items";
+									}
+								}
+								?>
 								</span></a></li>
 								<li class="home-links d-none"><a href="profile.php" class="drop-text">Profile</a></li>
 								<li class="home-links d-none"><a href="password.php" class="drop-text">change password</a></li>
